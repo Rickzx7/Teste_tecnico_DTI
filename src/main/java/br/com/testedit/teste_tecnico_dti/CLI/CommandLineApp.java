@@ -1,8 +1,8 @@
 package br.com.testedit.teste_tecnico_dti.cli;
 
-import br.com.testedit.teste_tecnico_dti.entities.Book;
-import br.com.testedit.teste_tecnico_dti.service.BookService;
+import br.com.testedit.teste_tecnico_dti.Service.BookSe
 import br.com.testedit.teste_tecnico_dti.dto.BookDto;
+import br.com.testedit.teste_tecnico_dti.service.BookService;k;Service;
 import br.com.testedit.teste_tecnico_dti.util.DateUtils;
 import br.com.testedit.teste_tecnico_dti.util.ValidationUtils;
 import br.com.testedit.teste_tecnico_dti.util.BookValidator;
@@ -49,7 +49,8 @@ public class CommandLineApp implements CommandLineRunner {
             System.out.println("0. Exit");
             System.out.print("Enter your choice: ");
 
-            choice = scanner.nextInt();
+                choice = scanner.nextInt();
+
 
             switch (choice) {
                 case 1:
@@ -151,16 +152,18 @@ public class CommandLineApp implements CommandLineRunner {
         System.out.println("=== Adding New Book ===");
 
         try {
-
+            // 1ª Validação: BookValidator (validação manual + entrada de dados)
             String title = bookValidator.getValidatedTitle();
             String author = bookValidator.getValidatedAuthor();
             Integer pages = bookValidator.getValidatedPages();
             LocalDate publicationDate = bookValidator.getValidatedPublicationDate();
             String description = bookValidator.getValidatedDescription();
 
+            // 2ª Validação: Bean Validation (ValidationUtils)
             BookDto dto = new BookDto(null, title, author, pages, publicationDate, description);
             ValidationUtils.validate(dto);
 
+            // Se passou nas duas validações, salva o livro
             Book savedBook = bookService.create(dto);
             System.out.println("Book added successfully! ID: " + savedBook.getId());
 

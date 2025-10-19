@@ -15,9 +15,10 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 
+import br.com.testedit.teste_tecnico_dti.dto.BookDto;
 import br.com.testedit.teste_tecnico_dti.entities.Book;
 import br.com.testedit.teste_tecnico_dti.repository.BookRepository;
-import br.com.testedit.teste_tecnico_dti.dto.BookDto;
+import br.com.testedit.teste_tecnico_dti.service.BookService;
 import br.com.testedit.teste_tecnico_dti.util.DateUtils;
 
 @ExtendWith(MockitoExtension.class)
