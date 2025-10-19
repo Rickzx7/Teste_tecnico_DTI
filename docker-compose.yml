@@ -1,0 +1,20 @@
+services:
+  app:
+    build: .
+    container_name: teste-tecnico-app
+    volumes:
+      - ./data:/app/data
+      - ./logs:/app/logs
+    environment:
+      - SPRING_PROFILES_ACTIVE=docker
+      # Forçar logs personalizados no arquivo
+      - LOGGING_LEVEL_BR_COM_TESTEDIT_TESTE_TECNICO_DTI=INFO
+      - LOGGING_FILE_NAME=/app/logs/personalized-logs.log
+    networks:
+      - app-network
+    tty: true
+    stdin_open: true
+
+networks:
+  app-network:
+    driver: bridge
