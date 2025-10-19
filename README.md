@@ -51,23 +51,39 @@ A aplicação gerencia livros através da entidade `Book` com as seguintes propr
 ### 🔧 Dependências Necessárias
 
 1. **Java Development Kit (JDK) 21**
-   ```bash
-   # Verificar se Java 21 está instalado
-   java --version
-   ```
+   - **Download**: [Oracle JDK](https://www.oracle.com/java/technologies/downloads/) ou [OpenJDK](https://openjdk.org/projects/jdk/21/)
+   - **Instalação**: Execute o instalador e configure as variáveis de ambiente
+   - **Verificação**:
+     ```bash
+     java --version
+     # Deve mostrar: openjdk 21.x.x
+     ```
 
-2. **Gradle** (opcional - o projeto inclui Gradle Wrapper)
-   ```bash
-   # Verificar se Gradle está instalado (opcional)
-   gradle --version
-   ```
+2. **Docker e Docker Compose** (para execução em container)
+   - **Windows/Mac**: [Docker Desktop](https://www.docker.com/products/docker-desktop/)
+   - **Linux**: [Docker Engine](https://docs.docker.com/engine/install/) + [Docker Compose](https://docs.docker.com/compose/install/)
+   - **Verificação**:
+     ```bash
+     docker --version
+     docker compose --version
+     ```
 
-3. **Docker e Docker Compose** (para execução em container)
-   ```bash
-   # Verificar se Docker está instalado
-   docker --version
-   docker compose --version
-   ```
+3. **Git** (para clonar o repositório)
+   - **Download**: [Git Official](https://git-scm.com/downloads)
+   - **Instalação**: Execute o instalador com configurações padrão
+   - **Verificação**:
+     ```bash
+     git --version
+     ```
+
+### 📦 Dependências Automáticas
+
+As seguintes dependências são baixadas automaticamente pelo Gradle:
+- **Gradle Wrapper** (incluído no projeto)
+- **Spring Boot 3.5.6** e todas as suas dependências
+- **JUnit 5, Mockito, AssertJ** (para testes)
+- **SQLite Driver** (banco de dados)
+- **Lombok** (redução de código boilerplate)
 
 ### 📥 Instalação
 
@@ -288,6 +304,7 @@ O projeto inclui testes unitários para:
 - `ValidationUtils` - Validações
 - `BookDto` - Transfer Object
 - `BookValidator` - Validação interativa
+- `CommandLineApp` - Interface de linha de comando
 
 ## 📁 Estrutura do Projeto
 
@@ -295,13 +312,13 @@ O projeto inclui testes unitários para:
 src/
 ├── main/
 │   ├── java/br/com/testedit/teste_tecnico_dti/
-│   │   ├── CLI/
+│   │   ├── cli/
 │   │   │   └── CommandLineApp.java          # Interface de linha de comando
-│   │   ├── Entities/
+│   │   ├── entities/
 │   │   │   └── Book.java                    # Entidade JPA
-│   │   ├── Repository/
+│   │   ├── repository/
 │   │   │   └── BookRepository.java          # Repositório JPA
-│   │   ├── Service/
+│   │   ├── service/
 │   │   │   └── BookService.java             # Lógica de negócio
 │   │   ├── dto/
 │   │   │   └── BookDto.java                 # Data Transfer Object
@@ -317,8 +334,8 @@ src/
 │       └── schema.sql                       # Schema do banco
 ├── test/
 │   └── java/br/com/testedit/teste_tecnico_dti/
-│       ├── CLI/
-│       ├── Service/
+│       ├── cli/
+│       ├── service/
 │       ├── dto/
 │       └── util/
 logs/                                        # Diretório de logs
