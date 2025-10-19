@@ -403,4 +403,3 @@ Para dúvidas ou problemas:
 
 ---
 
-**Desenvolvido com ❤️ usando Java 21 e Spring Boot**
