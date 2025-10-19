@@ -1,7 +1,7 @@
-package br.com.testedit.teste_tecnico_dti.CLI;
+package br.com.testedit.teste_tecnico_dti.cli;
 
-import br.com.testedit.teste_tecnico_dti.Entities.Book;
-import br.com.testedit.teste_tecnico_dti.Service.BookService;
+import br.com.testedit.teste_tecnico_dti.entities.Book;
+import br.com.testedit.teste_tecnico_dti.service.BookService;
 import br.com.testedit.teste_tecnico_dti.dto.BookDto;
 import br.com.testedit.teste_tecnico_dti.util.DateUtils;
 import br.com.testedit.teste_tecnico_dti.util.ValidationUtils;

@@ -1,6 +1,6 @@
-package br.com.testedit.teste_tecnico_dti.Repository;
+package br.com.testedit.teste_tecnico_dti.repository;
 
-import br.com.testedit.teste_tecnico_dti.Entities.Book;
+import br.com.testedit.teste_tecnico_dti.entities.Book;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 @Repository

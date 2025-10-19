@@ -1,4 +1,4 @@
-package br.com.testedit.teste_tecnico_dti.Service;
+package br.com.testedit.teste_tecnico_dti.service;
 
 import java.time.LocalDate;
 import java.util.Arrays;
@@ -15,8 +15,8 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 
-import br.com.testedit.teste_tecnico_dti.Entities.Book;
-import br.com.testedit.teste_tecnico_dti.Repository.BookRepository;
+import br.com.testedit.teste_tecnico_dti.entities.Book;
+import br.com.testedit.teste_tecnico_dti.repository.BookRepository;
 import br.com.testedit.teste_tecnico_dti.dto.BookDto;
 import br.com.testedit.teste_tecnico_dti.util.DateUtils;
 

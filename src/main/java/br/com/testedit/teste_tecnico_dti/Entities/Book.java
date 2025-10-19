@@ -1,4 +1,4 @@
-package br.com.testedit.teste_tecnico_dti.Entities;
+package br.com.testedit.teste_tecnico_dti.entities;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
