@@ -1,16 +1,13 @@
 package br.com.testedit.teste_tecnico_dti.cli;
-
-import br.com.testedit.teste_tecnico_dti.Service.BookSe
 import br.com.testedit.teste_tecnico_dti.dto.BookDto;
-import br.com.testedit.teste_tecnico_dti.service.BookService;k;Service;
-import br.com.testedit.teste_tecnico_dti.util.DateUtils;
-import br.com.testedit.teste_tecnico_dti.util.ValidationUtils;
+import br.com.testedit.teste_tecnico_dti.entities.Book;
+import br.com.testedit.teste_tecnico_dti.service.BookService;
 import br.com.testedit.teste_tecnico_dti.util.BookValidator;
+import br.com.testedit.teste_tecnico_dti.util.ValidationUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
-
 import java.time.LocalDate;
 import java.util.List;
 import java.util.Optional;
@@ -49,8 +46,7 @@ public class CommandLineApp implements CommandLineRunner {
             System.out.println("0. Exit");
             System.out.print("Enter your choice: ");
 
-                choice = scanner.nextInt();
-
+            choice = scanner.nextInt();
 
             switch (choice) {
                 case 1:
